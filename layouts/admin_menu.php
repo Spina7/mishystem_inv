@@ -11,7 +11,6 @@
       <span>Accesos</span>
     </a>
     <ul class="nav submenu">
-      <li><a href="group.php">Administrar grupos</a> </li>
       <li><a href="users.php">Administrar usuarios</a> </li>
     </ul>
   </li>
