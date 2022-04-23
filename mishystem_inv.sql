@@ -70,7 +70,7 @@ CREATE TABLE `users` (
   `name` varchar(60) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `user_level` int(11) NOT NULL,
+  `user_level` int(11) NOT NULL DEFAULT '1',
   `image` varchar(255) DEFAULT 'no_image.jpg',
   `status` int(1) NOT NULL,
   `last_login` datetime DEFAULT NULL
@@ -97,26 +97,6 @@ VALUES (
     'pzg9wa7o1.jpg',
     1,
     '2017-06-16 07:11:11'
-  ),
-  (
-    2,
-    'Special User',
-    'special',
-    'ba36b97a41e7faf742ab09bf88405ac04f99599a',
-    2,
-    'no_image.jpg',
-    1,
-    '2017-06-16 07:11:26'
-  ),
-  (
-    3,
-    'Default User',
-    'user',
-    '12dea96fec20593566ab75692c9949596833adc9',
-    3,
-    'no_image.jpg',
-    1,
-    '2017-06-16 07:11:03'
   );
 -- --------------------------------------------------------
 --
