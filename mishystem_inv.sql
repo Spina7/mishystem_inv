@@ -70,8 +70,8 @@ CREATE TABLE `users` (
   `name` varchar(60) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `user_level` int(11) NOT NULL DEFAULT '1',
-  `image` varchar(255) DEFAULT 'no_image.jpg',
+  `user_level` int(11) NULL DEFAULT '1',
+  `image` varchar(255) DEFAULT 'pzg9wa7o1.jpg',
   `status` int(1) NOT NULL,
   `last_login` datetime DEFAULT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
@@ -112,8 +112,7 @@ ADD PRIMARY KEY (`id`),
 ALTER TABLE `products`
 ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`),
-  ADD KEY `categorie_id` (`categorie_id`),
-  ADD KEY `media_id` (`media_id`);
+  ADD KEY `categorie_id` (`categorie_id`);
 --
 -- Indices de la tabla `sales`
 --
@@ -128,19 +127,9 @@ ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`),
   ADD KEY `user_level` (`user_level`);
 --
---
--- AUTO_INCREMENT de las tablas volcadas
---
---
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
-MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  AUTO_INCREMENT = 2;
---
--- AUTO_INCREMENT de la tabla `media`
---
-ALTER TABLE `media`
 MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   AUTO_INCREMENT = 2;
 --

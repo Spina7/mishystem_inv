@@ -23,9 +23,9 @@ if (isset($_POST['add_product'])) {
     }
     $date    = make_date();
     $query  = "INSERT INTO products (";
-    $query .= " name,quantity,buy_price,sale_price,categorie_id,media_id,date";
+    $query .= " name,quantity,buy_price,sale_price,categorie_id,date";
     $query .= ") VALUES (";
-    $query .= " '{$p_name}', '{$p_qty}', '{$p_buy}', '{$p_sale}', '{$p_cat}', '{$media_id}', '{$date}'";
+    $query .= " '{$p_name}', '{$p_qty}', '{$p_buy}', '{$p_sale}', '{$p_cat}', '{$date}'";
     $query .= ")";
     $query .= " ON DUPLICATE KEY UPDATE name='{$p_name}'";
     if ($db->query($query)) {

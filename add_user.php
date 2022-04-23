@@ -8,19 +8,18 @@ $groups = find_all('user_groups');
 <?php
 if (isset($_POST['add_user'])) {
 
-  $req_fields = array('full-name', 'username', 'password', 'level');
+  $req_fields = array('full-name', 'username', 'password');
   validate_fields($req_fields);
 
   if (empty($errors)) {
     $name   = remove_junk($db->escape($_POST['full-name']));
     $username   = remove_junk($db->escape($_POST['username']));
     $password   = remove_junk($db->escape($_POST['password']));
-    $user_level = (int)$db->escape($_POST['level']);
     $password = sha1($password);
     $query = "INSERT INTO users (";
-    $query .= "name,username,password,user_level,status";
+    $query .= "name, username, password, status";
     $query .= ") VALUES (";
-    $query .= " '{$name}', '{$username}', '{$password}', '{$user_level}','1'";
+    $query .= " '{$name}', '{$username}', '{$password}', '1'";
     $query .= ")";
     if ($db->query($query)) {
       //éxito
