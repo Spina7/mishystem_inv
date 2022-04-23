@@ -4,7 +4,7 @@
   // Comprobar en qué nivel el usuario tiene permiso para ver esta página
    page_require_level(1);
 ?>
-<?php
+<?phpsssssssssssssssssssssssssssssssss
   if(isset($_POST['add'])){
 
    $req_fields = array('group-name','group-level');
