@@ -104,7 +104,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `user_level` int(11) NOT NULL,
-  `image` varchar(255) DEFAULT 'no_image.jpg',
+  `image` varchar(255) DEFAULT 'pzg9wa7o1.jpg',
   `status` int(1) NOT NULL,
   `last_login` datetime DEFAULT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
@@ -137,7 +137,7 @@ VALUES (
     'special',
     'ba36b97a41e7faf742ab09bf88405ac04f99599a',
     2,
-    'no_image.jpg',
+    'pzg9wa7o1.jpg',
     1,
     '2017-06-16 07:11:26'
   ),
@@ -147,7 +147,7 @@ VALUES (
     'user',
     '12dea96fec20593566ab75692c9949596833adc9',
     3,
-    'no_image.jpg',
+    'pzg9wa7o1.jpg',
     1,
     '2017-06-16 07:11:03'
   );
